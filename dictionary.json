@@ -1,0 +1,59 @@
+{
+    "name": "HPF019",
+    "key": "sc",
+    "measurements": [
+        {
+            "name": "Accumulator Voltage",
+            "key": "hpf.voltage",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "V",
+                    "format": "float",
+                    "min": 0,
+                    "max": 660,
+                    "hints": {
+                        "range": 1
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Accumulator Current",
+            "key": "hpf.current",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "format": "float",
+                    "units": "A",
+                    "min": 0,
+                    "max": 1500,
+                    "hints": {
+                        "range": 1
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        }
+   ]
+}
+
