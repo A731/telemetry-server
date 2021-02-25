@@ -9,15 +9,16 @@ npm install openmct
 npm install express
 npm install express-ws
 npm install node-fetch
+npm install local-ip
 npm install -g node-gyp
 npm install -g node-pre-gyp
 npm install serialport --unsafe-perm
 npm install -g pm2
-mv /var/www/html/CUSTOM.conf /etc/apache2/conf-available/
 cd /var/www/html/node-modules/serialport
 node-gyp configure build
 cd /var/www/html/
 cp /var/www/.temp/* /var/www/html/
+mv /var/www/html/CUSTOM.conf /etc/apache2/conf-available/
 rm -rf /var/www/.temp
 pm2 start /var/www/html/server.js
 pm2 startup systemd
