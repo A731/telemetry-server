@@ -10,7 +10,7 @@ var spacecraft = new Spacecraft();
 var historyServer = new HistoryServer(spacecraft);
 var realtimeServer = new RealtimeServer(spacecraft);
 
-var iface = 'wlp0s20f3'; //name of wireless hotspot inteface
+var iface = 'wlan0'; //name of wireless hotspot inteface
 var localip = require('local-ip')(iface);
 app.use('/realtime', realtimeServer);
 app.use('/history', historyServer);
