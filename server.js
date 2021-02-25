@@ -147,7 +147,7 @@ function  readAndSort(txData)
 	if(txData[0] == 0x7E)
 	{
 		//If msg with can data
-		 if((txData[1] || (txData[2] != 0x0E)) && (txData[3] == 0x90))
+		 if(txData[1] || (txData[2] != 0x0C))
 		{
 			commonTxMsg(txData);	
 		}
@@ -161,7 +161,7 @@ function  readAndSort(txData)
 
 function commonTxMsg(txData)
 {
-	var idplacement = 17;
+	var idplacement = 15;
 	var arrLength = (txData[1] << 8 | txData[2] )+0x03; //Array length starting from 0
  	var dataLength = arrLength-idplacement;
 	/*To add or remove elements use theCascadinator function
@@ -173,13 +173,116 @@ function commonTxMsg(txData)
 	{
 	        switch((txData[idplacement] << 8 | txData[idplacement+1]))
 		{
-        	case(123):
-			hpf.voltage = theCascadinator(idplacement+3,txData,0.1,2);
-			break;
-        	case(124):
-			hpf.current = theCascadinator(idplacement+3,txData,0.1,2);
+                case(0x9):
+			hpf.bsmr = txData[idplacement+3];
+			hpf.maxtemp = txData[idplacement+4]*0.390625;
+			hpf.bmspreflag = txData[idplacement+5];
+			hpf.opmode = txData[idplacement+6];
+			hpf.mcid = txData[idplacement+7];
+			hpf.mincellvolt = theCascadinator(idplacement+8,txData,1,2);
                		break;
-        	default:
+		case(0xA):
+			hpf.pecerr = theCascadinator(idplacement+3, txData, 1, 4);
+			hpf.pecs = theCascadinator(idplacement+3, txData, 1,4);
+			break;
+		case(0xB):
+			hpf.bmsv = theCascadinator(idplacement+3, txData, 10, 4);
+			break;
+		case(0x1A):
+			hpf.btr = theCascadinator(idplacement+3,txData,0.1,2);
+			hpf.btl = theCascadinator(idplacement+9,txData,0.1,2);
+			hpf.susprl = txData[idplacement+5];
+			hpf.susprr = txData[idplacement+6];
+			hpf.suspfr = txData[idplacement+7];
+			hpf.suspfl = txData[idplacement+8];
+			break;
+ 		case(0x20):
+			hpf.ecu0 = txData[idplacement+3];
+			hpf.ecu1 = txData[idplacement+4];
+			hpf.ecu2 = txData[idplacement+5];
+			hpf.ecu3 = txData[idplacement+6];
+			hpf.ecu4 = txData[idplacement+7];
+			hpf.ecu5 = txData[idplacement+8];
+			hpf.ecu6 = txData[idplacement+9];
+			hpf.ecu7 = txData[idplacement+10];
+			break;
+		case(0x101):
+			hpf.linv = txData[idplacement+3];
+			hpf.rinv = txData[idplacement+5];
+			break;
+		case(0x121):
+			hpf.accelx = theCascadinator(idplacement+3, txData, 0.01,2);
+			hpf.accely = theCascadinator(idplacement+5, txData, 0.01,2);
+			hpf.accelz = theCascadinator(idplacement+7, txData, 0.01,2);
+			break;
+		case(0x122):
+			hpf.ratx = theCascadinator(idplacement+3, txData, 0.001,2);
+			hpf.raty = theCascadinator(idplacement+5, txData, 0.001,2);
+			hpf.ratz = theCascadinator(idplacement+7, txData, 0.001,2);
+			break;
+		case(0x123):
+			hpf.dvelx = theCascadinator(idplacement+3, txData, 0.01,2);
+			hpf.dvely = theCascadinator(idplacement+5, txData, 0.01,2);
+			hpf.dvelz = theCascadinator(idplacement+7, txData, 0.01,2);
+			break;
+		case(0x132):
+			hpf.rangle = theCascadinator(idplacement+3, txData, 0.0001,2);
+			hpf.pangle = theCascadinator(idplacement+5, txData, 0.0001,2);
+			hpf.yangle = theCascadinator(idplacement+7, txData, 0.0001,2);
+			break;
+		case(0x139):
+			hpf.velx = theCascadinator(idplacement+3, txData, 0.01,2);
+			hpf.vely = theCascadinator(idplacement+5, txData, 0.01,2);
+			hpf.velz = theCascadinator(idplacement+7, txData, 0.01,2);
+			break;
+		case(0x1F0):
+			hpf.renc = theCascadinator(idplacement+3, txData, 1, 4);
+        		break;
+		case(0x1F1):
+			hpf.lenc = theCascadinator(idplacement+3, txData, 1, 4);
+			break;
+		case(0x220):
+			hpf.anglet = theCascadinator(idplacement+3, txData, 0.0001, 2);
+			hpf.angles = theCascadinator(idplacement+5, txData, 0.0001, 2);
+			hpf.curvrad = theCascadinator(idplacement+7, txData, 0.001, 2);
+			break;
+		case(0x520):
+			hpf.tsalair = txData[datapoints+6]*0.197692;
+			hpf.lvvolt = txData[datapoints+7]*0.1216;
+			hpf.lvcurr = txData[datapoints+8];
+			break;
+		case(0x521):
+			hpf.accucurr = theCascadinator(idplacement+6, txData, 0.001,3);
+			break;
+		case(0x522):
+			hpf.accuvolt = theCascadinator(idplacement+6, txData, 0.001,3);
+			break;
+		case(0x523):
+			hpf.invvvolt = theCascadinator(idplacement+6, txData, 0.001,3);
+			break;
+		case(0x526):
+			hpf.power = theCascadinator(idplacement+6, txData, 1,3);
+			break;
+		case(0x528):
+			hpf.energy = theCascadinator(idplacement+6, txData, 0.001,3);
+			break;
+		case(0x7C6):
+			hpf.lefttrqreq = theCascadinator(idplacement+3, txData, 0.065,2);
+			hpf.righttrqreq = theCascadinator(idplacement+5, txData, 0.065,2);
+			hpf.frontbp = theCascadinator(idplacement+7, txData, 1,2);
+			hpf.rearbp = theCascadinator(idplacement+9, txData, 1,2);
+			break;
+		case(0x7C7):
+			hpf.rightinvsp = theCascadinator(idplacement+3, txData, 1,4);
+			hpf.leftinvsp = theCascadinator(idplacement+7, txData, 1,4);
+			break;
+		case(0x7C8):
+			hpf.temp = txData[idplacement+3];
+			hpf.maxtorq = txData[idplacement+4];
+			hpf.lefttrqperc = theCascadinator(idplacement+7, txData, 1,2);
+			hpf.righttrqperc = theCascadinator(idplacement+9, txData, 1,2);
+			break;
+		default:
                		break;
         }
 
@@ -205,4 +308,3 @@ function theCascadinator(x,txData,form,size)
 	}
 	return (result * form);	
 }
-
