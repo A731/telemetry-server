@@ -10,17 +10,17 @@ npm install express
 npm install express-ws
 npm install node-fetch
 npm install local-ip
-npm install -g node-gyp
-npm install -g node-pre-gyp
+npm install node-gyp
+npm install node-pre-gyp
 npm install serialport --unsafe-perm
-npm install -g pm2
-sudo mv -R ~/openmct/* /var/www/html/
+npm install pm2
+sudo cp -R ~/openmct/* /var/www/html/
 sudo cp -R /var/www/html/dist/* /var/www/html/
 cd /var/www/html/
-cd /var/www/html/node-modules/serialport
-sudo node-gyp configure build
+#cd /var/www/html/node-modules/serialport
+#sudo node-gyp configure build
 cd /var/www/html/
-sudo cp ~/.temp/* /var/www/html/
+sudo cp -R ~/.temp/* /var/www/html/
 mv /var/www/html/CUSTOM.conf /etc/apache2/conf-available/
 sudo rm -rf /var/www/.temp
 sudo pm2 start /var/www/html/server.js
