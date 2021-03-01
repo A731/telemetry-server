@@ -1,5 +1,5 @@
 cd ~/
-sudo apt-get update -y && apt-get upgrade -y
+sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install -y git npm nodejs apache2 python python3
 sudo rm -rf /var/www/html/*
 git clone https://github.com/nasa/openmct.git
