@@ -1,11 +1,13 @@
 apt-get update -y && apt-get upgrade -y
-apt-get install -y git npm nodejs apache2
+apt-get install -y git npm nodejs apache2 python python3
 rm -rf /var/www/html/*
 cd /var/www/html/
 git clone https://github.com/nasa/openmct.git
 npm install
 git clone https://github.com/A731/telemetry-server.git /var/www/.temp
 npm install openmct
+mv /var/www/html/openmct/* /var/www/html/
+rm -rf /var/www/html/openmct
 npm install express
 npm install express-ws
 npm install node-fetch
