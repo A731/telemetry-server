@@ -24,7 +24,7 @@ app.listen(myPort, function () {
 //Get keys from dictionary.json
 function getDictionaryKeys(){
 	var data = {};
-	fetch("http://localhost/dictionary.json")
+	fetch("http://localhost/dictionary.json") //Change localhost to IP address of device
 	.then(results => results.json())
 	.then(json => {
         	Object.keys(json.measurements).forEach(key => data[json.measurements[key].key] = 0);
