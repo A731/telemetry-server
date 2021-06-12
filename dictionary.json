@@ -1,1645 +1,2424 @@
 {
-    "name": "HPF019",
-    "key": "sc",
-    "measurements": [
+  "name": "HPF020",
+  "key": "sc",
+  "measurements": [
+    {
+      "name": "APPS_0",
+      "key": "APPS_0",
+      "values": [
         {
-            "name": "BMSR Reason",
-            "key": "bmsr_reason",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "BMSR",
-                    "format": "integer",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Max Temp",
-            "key": "maxt01",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "C",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "BMS Preflag",
-            "key": "bmspre",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Flag",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Opmode",
-            "key": "opmode",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Opmode",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Minimum cell voltage",
-            "key": "mcv",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "V",
-                    "min": 0,
-                    "max": 24,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Pec errors",
-            "key": "pec01",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Errors",
-                    "min": 0,
-                    "max": 100000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Pec errors/s",
-            "key": "pecs",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Error/s",
-                    "min": 0,
-                    "max": 10000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "TSAL AIR Voltage",
-            "key": "airvolt",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "V",
-                    "min": 0,
-                    "max": 28,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "BMS Voltage",
-            "key": "bmsv",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "V",
-                    "min": 0,
-                    "max": 660,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Brake temperature right",
-            "key": "btr",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "C",
-                    "min": 0,
-                    "max": 120,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Suspension rear left",
-            "key": "susprl",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Nm",
-                    "min": 0,
-                    "max": 200,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Suspension rear right",
-            "key": "susprr",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Nm",
-                    "min": 0,
-                    "max": 200,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Suspension front right",
-            "key": "suspfr",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Nm",
-                    "min": 0,
-                    "max": 200,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Suspension front left",
-            "key": "suspfl",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Nm",
-                    "min": 0,
-                    "max": 200,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Brake temperature left",
-            "key": "btl",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "C",
-                    "min": 0,
-                    "max": 120,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 0",
-            "key": "ecu0",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 1",
-            "key": "ecu1",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 2",
-            "key": "ecu2",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 3",
-            "key": "ecu3",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 4",
-            "key": "hpf019.ecu4",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 5",
-            "key": "ecu5",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 6",
-            "key": "ecu6",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "ECU 7",
-            "key": "ecu7",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-
-        {
-            "name": "Left inverter",
-            "key": "linv",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "S",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Right inverter",
-            "key": "rinv",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "integer",
-                    "units": "S",
-                    "min": 0,
-                    "max": 255,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Acceleration X",
-            "key": "accelx",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Acceleration Y",
-            "key": "accely",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Acceleration Z",
-            "key": "accelz",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Rate of turn X",
-            "key": "ratx",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-          {
-            "name": "Rate of turn Y",
-            "key": "raty",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Rate of turn Z",
-            "key": "ratz",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Delta velocity X",
-            "key": "dvelx",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Delta velocity Y",
-            "key": "dvely",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Delta velocity Z",
-            "key": "dvelz",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Roll angle",
-            "key": "rangle",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "°",
-                    "min": -180,
-                    "max": 180,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Pitch angle",
-            "key": "pangle",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "°",
-                    "min": -180,
-                    "max": 180,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Yaw angle",
-            "key": "yangle",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "°",
-                    "min": -180,
-                    "max": 180,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Velocity X",
-            "key": "velx",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Velocity Y",
-            "key": "vely",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Velocity Z",
-            "key": "velz",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "M/s",
-                    "min": -32,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Renc",
-            "key": "renc",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 32000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Lenc",
-            "key": "lenc",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Code",
-                    "min": 0,
-                    "max": 32000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Angle track",
-            "key": "anglet",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "°",
-                    "min": -180,
-                    "max": 180,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Angle slip",
-            "key": "angles",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "°",
-                    "min": -180,
-                    "max": 180,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Curve radius",
-            "key": "curvrad",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "°",
-                    "min": -180,
-                    "max": 180,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "TSAL Air Voltage",
-            "key": "tsalair",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "V",
-                    "min": 0,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "LV Voltage",
-            "key": "lvvolt",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "V",
-                    "min": 0,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "LV current",
-            "key": "lvcurr",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "A",
-                    "min": 0,
-                    "max": 32,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Accumulator current",
-            "key": "accucurr",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "A",
-                    "min": 0,
-                    "max": 200,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Accumulator voltage",
-            "key": "accuvolt",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "V",
-                    "min": 0,
-                    "max": 660,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Inverter voltage",
-            "key": "invvolt",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "V",
-                    "min": 0,
-                    "max": 660,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Power",
-            "key": "power",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "W",
-                    "min": 0,
-                    "max": 100000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Energy",
-            "key": "energy",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Joule",
-                    "min": 0,
-                    "max": 100000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Left torque request",
-            "key": "lefttrqreq",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "%",
-                    "min": 0,
-                    "max": 100,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Right torque request",
-            "key": "righttrqreq",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "%",
-                    "min": 0,
-                    "max": 100,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Front brake pressure",
-            "key": "frontbp",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "PSI",
-                    "min": 0,
-                    "max": 100,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Rear brake pressure",
-            "key": "rearbp",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "PSI",
-                    "min": 0,
-                    "max": 100,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Right Inverter Speed",
-            "key": "rightinvsp",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "rpm",
-                    "min": 0,
-                    "max": 20000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Left Inverter Speed",
-            "key": "leftinvsp",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "rpm",
-                    "min": 0,
-                    "max": 20000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Temperature",
-            "key": "temp",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "C",
-                    "min": 0,
-                    "max": 200,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Max torque",
-            "key": "maxtorq",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "Nm",
-                    "min": 0,
-                    "max": 20000,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Left torque percent",
-            "key": "lefttrqperc",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "%",
-                    "min": 0,
-                    "max": 100,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
-          },
-        {
-            "name": "Right torque percent",
-            "key": "righttrqperc",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "format": "float",
-                    "units": "%",
-                    "min": 0,
-                    "max": 100,
-                    "hints": {
-                        "range": 1
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                 }
-             ]
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
           }
-    ]
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dhab_Current",
+      "key": "Dhab_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Coulumbs",
+      "key": "IVT_Coulumbs",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "C",
+          "format": "float",
+          "min": -2140000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Current",
+      "key": "IVT_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": -2140000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Energy",
+      "key": "IVT_Energy",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Ws",
+          "format": "float",
+          "min": -2140000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Power",
+      "key": "IVT_Power",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "W",
+          "format": "float",
+          "min": -2140000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Temperature",
+      "key": "IVT_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "C",
+          "format": "float",
+          "min": -214000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Voltage1",
+      "key": "IVT_Voltage1",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "V",
+          "format": "float",
+          "min": -2140000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Voltage2",
+      "key": "IVT_Voltage2",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "V",
+          "format": "float",
+          "min": -2140000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "IVT_Voltage3",
+      "key": "IVT_Voltage3",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "V",
+          "format": "float",
+          "min": -2140000000,
+          "max": 2140000000,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Suspension_Front_Right",
+      "key": "Suspension_Front_Right",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Nm",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Suspension_Front_Left",
+      "key": "Suspension_Front_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Nm",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Suspension_Back_Right",
+      "key": "Suspension_Back_Right",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Nm",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Suspension_Back_Left",
+      "key": "Suspension_Back_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Nm",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reason",
+      "key": "Reason",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Precharge_Flag",
+      "key": "Precharge_Flag",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pec_Total",
+      "key": "Pec_Total",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pec_Delta",
+      "key": "Pec_Delta",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Opmode",
+      "key": "Opmode",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Digital_In",
+      "key": "Digital_In",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Digital_In",
+      "key": "Digital_In",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Digital_In",
+      "key": "Digital_In",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "APPS1",
+      "key": "APPS1",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Accumulator_Voltage",
+      "key": "Accumulator_Voltage",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "V",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "DC_IMD",
+      "key": "DC_IMD",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "%",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_TSAL",
+      "key": "I_TSAL",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_Telementry",
+      "key": "I_Telementry",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_RightPump",
+      "key": "I_RightPump",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_RightFans",
+      "key": "I_RightFans",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_LeftPump",
+      "key": "I_LeftPump",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_LeftFans",
+      "key": "I_LeftFans",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_IVT",
+      "key": "I_IVT",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_Inverters",
+      "key": "I_Inverters",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_Front",
+      "key": "I_Front",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_Front",
+      "key": "I_Front",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_ECU",
+      "key": "I_ECU",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_currentMeasurement",
+      "key": "I_currentMeasurement",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_Buzzers",
+      "key": "I_Buzzers",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_BrakeLight",
+      "key": "I_BrakeLight",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_AccuPCBs",
+      "key": "I_AccuPCBs",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "I_AccuFans",
+      "key": "I_AccuFans",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver_Current",
+      "key": "Driver_Current",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "A",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brake_Pressure_Front",
+      "key": "Brake_Pressure_Front",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "bar",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brake_Pressure_Back",
+      "key": "Brake_Pressure_Back",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "bar",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "NewSignal46",
+      "key": "NewSignal46",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Air_Flag",
+      "key": "Air_Flag",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Data",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Freq_IMD",
+      "key": "Freq_IMD",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "Hz",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Uptime",
+      "key": "Uptime",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "s",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Voltage_Min",
+      "key": "Voltage_Min",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "V",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Voltage_Max",
+      "key": "Voltage_Max",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "V",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Water_Temperature_Right_Before",
+      "key": "Water_Temperature_Right_Before",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Water_Temperature_Right_After",
+      "key": "Water_Temperature_Right_After",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Water_Temperature_Left_Before",
+      "key": "Water_Temperature_Left_Before",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Water_Temperature_Left_After",
+      "key": "Water_Temperature_Left_After",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Water_Temperature_Front_Right",
+      "key": "Water_Temperature_Front_Right",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Water_Temperature_Front_Left",
+      "key": "Water_Temperature_Front_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Rear_Right_Outside",
+      "key": "Tire_Temperature_Rear_Right_Outside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Rear_Right_Middle",
+      "key": "Tire_Temperature_Rear_Right_Middle",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Rear_Right_Inside",
+      "key": "Tire_Temperature_Rear_Right_Inside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Rear_Left_Middle",
+      "key": "Tire_Temperature_Rear_Left_Middle",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Rear_Left_Inside",
+      "key": "Tire_Temperature_Rear_Left_Inside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Front_Right_Outside",
+      "key": "Tire_Temperature_Front_Right_Outside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Front_Right_Middle",
+      "key": "Tire_Temperature_Front_Right_Middle",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Front_Right_Inside",
+      "key": "Tire_Temperature_Front_Right_Inside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Front_Left_Outside",
+      "key": "Tire_Temperature_Front_Left_Outside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Front_Left_Middle",
+      "key": "Tire_Temperature_Front_Left_Middle",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperature_Front_Left_Inside",
+      "key": "Tire_Temperature_Front_Left_Inside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tire_Temperatuer_Rear_Left_Outside",
+      "key": "Tire_Temperatuer_Rear_Left_Outside",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Temperature_Max",
+      "key": "Temperature_Max",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Oil_Temperature_Front_Right",
+      "key": "Oil_Temperature_Front_Right",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Oil_Temperature_Front_Left",
+      "key": "Oil_Temperature_Front_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Oil_Temperature_Back_Right",
+      "key": "Oil_Temperature_Back_Right",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Oil_Tempearture_Back_Left",
+      "key": "Oil_Tempearture_Back_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internal_Temperature",
+      "key": "Internal_Temperature",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brake_Temperature_Front_Left",
+      "key": "Brake_Temperature_Front_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brake_Temperature_Front_Left",
+      "key": "Brake_Temperature_Front_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brake_Temperature_Back_Right",
+      "key": "Brake_Temperature_Back_Right",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brake_Temperature_Back_Left",
+      "key": "Brake_Temperature_Back_Left",
+      "values": [
+        {
+          "key": "value",
+          "name": "Value",
+          "units": "�C",
+          "format": "float",
+          "min": 0,
+          "max": 0,
+          "hints": {
+            "range": 1
+          }
+        },
+        {
+          "key": "utc",
+          "source": "timestamp",
+          "name": "Timestamp",
+          "format": "utc",
+          "hints": {
+            "domain": 1
+          }
+        }
+      ]
+    }
+  ]
 }
