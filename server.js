@@ -10,7 +10,7 @@ var spacecraft = new Spacecraft();
 var historyServer = new HistoryServer(spacecraft);
 var realtimeServer = new RealtimeServer(spacecraft);
 
-var iface = 'wlan0'; //name of wireless hotspot inteface
+var iface = 'eth0'; //name of wireless hotspot inteface
 var localip = require('local-ip')(iface);
 app.use('/realtime', realtimeServer);
 app.use('/history', historyServer);
@@ -173,119 +173,134 @@ function commonTxMsg(txData)
 	{
 	        switch((txData[idplacement] << 8 | txData[idplacement+1]))
 		{
-                case(0x9):
-			hpf.bsmr = txData[idplacement+3];
-			hpf.maxtemp = txData[idplacement+4]*0.390625;
-			hpf.bmspreflag = txData[idplacement+5];
-			hpf.opmode = txData[idplacement+6];
-			hpf.mcid = txData[idplacement+7];
-			hpf.mincellvolt = theCascadinator(idplacement+8,txData,1,2);
-               		break;
+		case(0x8):
+			hpf.Uptime = theCascadinator(idplacement+3,txData,1,4);
+			hpf.Opmode = theCascadinator(idplacement+8,txData,1,1);
+			hpf.Reason = txData[idplacement+9];
+			hpf.Precharge_Flag = txData[idplacement+10];
+			hpf.Air_Flag = txData[idplacement+11];
+			break;
+		case(0x9):
+			hpf.Pec_Total = theCascadinator(idplacement+3, txData, 1, 4);
+			hpf.Pec_Delta = theCascadinator(idplacement+3, txData, 1,4);
+			break;
 		case(0xA):
-			hpf.pecerr = theCascadinator(idplacement+3, txData, 1, 4);
-			hpf.pecs = theCascadinator(idplacement+3, txData, 1,4);
-			break;
-		case(0xB):
-			hpf.bmsv = theCascadinator(idplacement+3, txData, 10, 4);
-			break;
-		case(0x1A):
-			hpf.btr = theCascadinator(idplacement+3,txData,0.1,2);
-			hpf.btl = theCascadinator(idplacement+9,txData,0.1,2);
-			hpf.susprl = txData[idplacement+5];
-			hpf.susprr = txData[idplacement+6];
-			hpf.suspfr = txData[idplacement+7];
-			hpf.suspfl = txData[idplacement+8];
-			break;
- 		case(0x20):
-			hpf.ecu0 = txData[idplacement+3];
-			hpf.ecu1 = txData[idplacement+4];
-			hpf.ecu2 = txData[idplacement+5];
-			hpf.ecu3 = txData[idplacement+6];
-			hpf.ecu4 = txData[idplacement+7];
-			hpf.ecu5 = txData[idplacement+8];
-			hpf.ecu6 = txData[idplacement+9];
-			hpf.ecu7 = txData[idplacement+10];
-			break;
-		case(0x101):
-			hpf.linv = txData[idplacement+3];
-			hpf.rinv = txData[idplacement+5];
-			break;
-		case(0x121):
-			hpf.accelx = theCascadinator(idplacement+3, txData, 0.01,2);
-			hpf.accely = theCascadinator(idplacement+5, txData, 0.01,2);
-			hpf.accelz = theCascadinator(idplacement+7, txData, 0.01,2);
-			break;
-		case(0x122):
-			hpf.ratx = theCascadinator(idplacement+3, txData, 0.001,2);
-			hpf.raty = theCascadinator(idplacement+5, txData, 0.001,2);
-			hpf.ratz = theCascadinator(idplacement+7, txData, 0.001,2);
-			break;
-		case(0x123):
-			hpf.dvelx = theCascadinator(idplacement+3, txData, 0.01,2);
-			hpf.dvely = theCascadinator(idplacement+5, txData, 0.01,2);
-			hpf.dvelz = theCascadinator(idplacement+7, txData, 0.01,2);
-			break;
-		case(0x132):
-			hpf.rangle = theCascadinator(idplacement+3, txData, 0.0001,2);
-			hpf.pangle = theCascadinator(idplacement+5, txData, 0.0001,2);
-			hpf.yangle = theCascadinator(idplacement+7, txData, 0.0001,2);
-			break;
-		case(0x139):
-			hpf.velx = theCascadinator(idplacement+3, txData, 0.01,2);
-			hpf.vely = theCascadinator(idplacement+5, txData, 0.01,2);
-			hpf.velz = theCascadinator(idplacement+7, txData, 0.01,2);
-			break;
-		case(0x1F0):
-			hpf.renc = theCascadinator(idplacement+3, txData, 1, 4);
-        		break;
-		case(0x1F1):
-			hpf.lenc = theCascadinator(idplacement+3, txData, 1, 4);
-			break;
-		case(0x220):
-			hpf.anglet = theCascadinator(idplacement+3, txData, 0.0001, 2);
-			hpf.angles = theCascadinator(idplacement+5, txData, 0.0001, 2);
-			hpf.curvrad = theCascadinator(idplacement+7, txData, 0.001, 2);
-			break;
-		case(0x520):
-			hpf.tsalair = txData[datapoints+6]*0.197692;
-			hpf.lvvolt = txData[datapoints+7]*0.1216;
-			hpf.lvcurr = txData[datapoints+8];
+			hpf.Accumulator_Voltage = theCascadinator(idplacement+3, txData, 1, 4);
+			hpf.Voltage_Min = txData[idplacement+4];
+			hpf.Voltage_Max = txData[idplacement+5];
+			hpf.Temperature_Max = txData[idplacement+6];
 			break;
 		case(0x521):
-			hpf.accucurr = theCascadinator(idplacement+6, txData, 0.001,3);
+			hpf.IVT_Current = theCascadinator(idplacement+6, txData,0.001,4);
 			break;
 		case(0x522):
-			hpf.accuvolt = theCascadinator(idplacement+6, txData, 0.001,3);
+			hpf.IVT_Voltage1 = theCascadinator(idplacement+6, txData,0.001,4);
 			break;
 		case(0x523):
-			hpf.invvvolt = theCascadinator(idplacement+6, txData, 0.001,3);
+			hpf.IVT_Voltage2 = theCascadinator(idplacement+6, txData,0.001,4);
+			break;
+		case(0x524):
+			hpf.IVT_Voltage3 = theCascadinator(idplacement+6, txData,0.001,4);
+			break;
+		case(0x525):
+			hpf.IVT_Temperature = theCascadinator(idplacement+6, txData,0.001,4);
 			break;
 		case(0x526):
-			hpf.power = theCascadinator(idplacement+6, txData, 1,3);
+			hpf.IVT_Temperature = theCascadinator(idplacement+6, txData,1,4);
+			break;
+		case(0x527):
+			hpf.IVT_Power = theCascadinator(idplacement+6, txData,1,4);
 			break;
 		case(0x528):
-			hpf.energy = theCascadinator(idplacement+6, txData, 0.001,3);
+			hpf.IVT_Coulumbs = theCascadinator(idplacement+6, txData,3600,4);
 			break;
-		case(0x7C6):
-			hpf.lefttrqreq = theCascadinator(idplacement+3, txData, 0.065,2);
-			hpf.righttrqreq = theCascadinator(idplacement+5, txData, 0.065,2);
-			hpf.frontbp = theCascadinator(idplacement+7, txData, 1,2);
-			hpf.rearbp = theCascadinator(idplacement+9, txData, 1,2);
+		case(0x690):
+			hpf.Brake_Temperature_Front_Left = theCascadinator(idplacement+3,txData,1,2);
+			hpf.Oil_Temperature_Front_Left = txData[idplacement+5];	
+			hpf.Water_Temperature_Front_Left = txData[idplacement+6];
 			break;
-		case(0x7C7):
-			hpf.rightinvsp = theCascadinator(idplacement+3, txData, 1,4);
-			hpf.leftinvsp = theCascadinator(idplacement+7, txData, 1,4);
+		case(0x692):
+			hpf.Suspension_Front_Left = theCascadinator(idplacement+3,txData,1,2);
+			hpf.Oil_Temperature_Front_Right = txData[idplacement+5];	
+			hpf.Water_Temperature_Front_Right = txData[idplacement+6];
+			hpf.Suspension_Front_Right = theCascadinator(idplacement+7,txData,1,2);
 			break;
-		case(0x7C8):
-			hpf.temp = txData[idplacement+3];
-			hpf.maxtorq = txData[idplacement+4];
-			hpf.lefttrqperc = theCascadinator(idplacement+7, txData, 1,2);
-			hpf.righttrqperc = theCascadinator(idplacement+9, txData, 1,2);
+		case(0x694):
+			hpf.APPS1 = theCascadinator(idplacement+3,txData,1,2);
+			hpf.Brake_Pressure_Back = theCascadinator(idplacement+5,txData,0.1,2);
+			hpf.Brake_Pressure_Front = theCascadinator(idplacement+7,txData,0.1,2);
+			hpf.Brake_Temperature_Front_Left = theCascadinator(idplacement+9,txData,1,2);
+			break;
+		case(0x696):
+			hpf.Water_Temperature_Left_Before = txData[idplacement+3];		
+			hpf.Water_Temperature_Left_After = txData[idplacement+4];
+			hpf.Water_Temperature_Right_Before = txData[idplacement+5];
+			hpf.Water_Temperature_Right_After = txData[idplacement+6];
+			break;
+		case(0x698):
+			hpf.Suspension_Back_Left = theCascadinator(idplacement+3,txData,1,2);
+			hpf.Suspension_Back_Right = theCascadinator(idplacement+5,txData,1,2);
+			break;
+		case(0x69B):
+			hpf.Brake_Temperature_Back_Right = theCascadinator(idplacement+3,txData,1,2);
+			hpf.Brake_Temperature_Back_Left = theCascadinator(idplacement+5,txData,1,2);		
+			hpf.Oil_Temperature_Back_Right = txData[idplacement+7];	
+			hpf.Oil_Temperature_Back_Left = txData[idplacement+8];
+			break;
+		case(0x69C):
+			hpf.Tire_Temperature_Front_Left_Inside = txData[idplacement+3];	
+			hpf.Tire_Temperature_Front_Left_Middle = txData[idplacement+4];			
+			hpf.Tire_Temperature_Front_Left_Outside = txData[idplacement+5];
+			break;
+		case(0x69E):
+			hpf.Tire_Temperature_Front_Right_Inside = txData[idplacement+3];	
+			hpf.Tire_Temperature_Front_Right_Middle = txData[idplacement+4];			
+			hpf.Tire_Temperature_Front_Right_Outside = txData[idplacement+5];
+			break;
+		case(0x6A0):
+			hpf.Tire_Temperature_Rear_Left_Inside = txData[idplacement+3];	
+			hpf.Tire_Temperature_Rear_Left_Middle = txData[idplacement+4];			
+			hpf.Tire_Temperature_Rear_Left_Outside = txData[idplacement+5];
+			break;
+		case(0x6A2):
+			hpf.Tire_Temperature_Rear_Right_Inside = txData[idplacement+3];	
+			hpf.Tire_Temperature_Rear_Right_Middle = txData[idplacement+4];			
+			hpf.Tire_Temperature_Rear_Right_Outside = txData[idplacement+5];
+			break;
+		case(0x6AE):
+			hpf.Digital_In = txData[idplacement+3];
+			hpf.I_Telemetry = txData[idplacement+4]*0.1;
+			hpf.I_Front = txData[idplacement+5]*0.1;
+			break;
+		case(0x6AF):
+			hpf.Digital_In = txData[idplacement+3];
+			hpf.I_Inverters = txData[idplacement+4]*0.1;
+			hpf.I_ECU = txData[idplacement+5]*0.1;
+			hpf.I_Front = txData[idplacement+6]*0.1;
+			break;
+		case(0x6B0):
+			hpf.I_LeftFans = txData[idplacement+3]*0.1;
+			hpf.I_RightFans = txData[idplacement+4]*0.1;
+			hpf.I_LeftPump = txData[idplacement+5]*0.1;
+			hpf.I_RightPump = txData[idplacement+6]*0.1;
+			break;
+		case(0x6B1):
+			hpf.I_BrakeLight = txData[idplacement+3]*0.1;
+			hpf.I_Buzzers = txData[idplacement+4]*0.1;
+			hpf.I_IVT = txData[idplacement+5]*0.1;
+			hpf.I_AccuPCBs = txData[idplacement+6]*0.1;
+			hpf.I_AccuFans = txData[idplacement+7]*0.1;
+			hpf.I_Freq_IMD = theCascadinator(idplacement+8,txData,1,2);
+			hpf.DC_IMD = txData[idplacement+10];
+			break;
+		case(0x6B2):
+			hpf.Digital_In = txData[idplacement+3];
+			hpf.I_currentMeasurement = txData[idplacement+4]*0.1;
+			hpf.I_TSAL = txData[idplacement+5]*0.1;
 			break;
 		default:
                		break;
         }
-
 		dataLength -= txData[idplacement+2]+3;
 		idplacement += txData[idplacement+2]+3;
 	
