@@ -13,7 +13,7 @@ function HistoricalTelemetryPlugin() {
                 return domainObject.type === 'example.telemetry';
             },
             request: function (domainObject, options) {
-                var url = 'http://localhost/node/history/' +
+                var url = location.origin + '/node/history/' +
                     domainObject.identifier.key +
                     '?start=' + options.start +
                     '&end=' + options.end;
